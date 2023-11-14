@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Details</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Main Css -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/item_details.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Tab Icon Link -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/logo.svg" />
+  </head>
+  <body>
+    <!-- Star Header -->
+    <header id="header">
+      <div class="container ">
+        <div class="left-head">
+          <a href="index.html" class="logo">
+            <img
+              src="assets/imgs/logo.svg"
+              style="width: 60px; margin-right: 12px"
+              alt=""
+            />
+            <div>LLEGAR</div>
+          </a>
+          <form action="">
+            <input id="search" type="text" placeholder="Search" autocomplete="off">
+            <button type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+        <!-- Star Menu -->
+        <nav>
+          <ul class="menu">
+            <li>
+              <a href="#">Categories</a>
+              <ul class="submenu">
+                <li>
+                  <i class="fa-solid fa-house"></i><a href="">Property</a>
+                  <ul class="submenu2">
+                    <li><a href="">House</a></li>
+                    <li><a href="">Hotel Rooms</a></li>
+                    <li><a href="">Chalet</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <i class="fa-solid fa-car"></i><a href="">Transportation</a>
+                  <ul class="submenu2">
+                    <li><a href="">Cars</a></li>
+                    <li><a href="">Motocycle</a></li>
+                    <li><a href="">Bike</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <i class="fa-solid fa-camera"></i><a href="">Electronics</a>
+                  <ul class="submenu2">
+                    <li><a href="">Cameras</a></li>
+                    <li><a href="">Lighting Equipment</a></li>
+                    <li><a href="">Audio Equipment</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <i class="fa-solid fa-baseball"></i><a href="">Play Areas</a>
+                  <ul class="submenu2">
+                    <li><a href="">PlayGrounds</a></li>
+                    <li><a href="">Water Parks</a></li>
+                    <li><a href="">Miniature golf</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <i class="fa-solid fa-shirt"></i><a href="">Clothes</a>
+                  <ul class="submenu2">
+                    <li><a href="">Male</a></li>
+                    <li><a href="">Female</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="features"><a href="#Features">Features</a></li>
+            <li class="team"><a href="#team">Team</a></li>
+            <li class="about"><a href="#about-us">About</a></li>
+          </ul>
+        </nav>
+            <!-- End Menu -->
+          <div class="btns"">
+            <a href="login.html" class="login">Login</a>
+            <a href="sign_up.html" class="get-started">Get Started</a>
+          </div>
+          <ul class="active-header" id="active-header">
+            <li class="add-item"><i class="fa-regular fa-square-plus"></i></li>
+            <li class="favorite"><i class="fa-regular fa-heart"></i><div></div></li>
+            <li class="profile">
+              <div class="image">
+                
+              </div>
+              <ul id="dropdownProfile" class=" dropdown-profile">
+                <li>
+                  <div class="name"></div>
+                  <div class="email"></div>
+                </li>
+                <li id="yourProfile">Your Profile</li>
+                <li id="myActivities"><div>My Activities <i class="fa-solid fa-arrow-right-long"></i></div>
+                  <ul class="subactivity">
+                    <li id="myItems"><i class="fa-solid fa-house-chimney"></i>My Item</li>
+                    <li id="ItemsIRented"><i class="fa-solid fa-thumbs-up"></i>Items I Had Rente</li>
+                    <li id="clientRented"><i class="fa-solid fa-circle-check"></i>Client Rented</li>
+                  </ul>
+                </li>
+                <li id="orders">Orders</li>
+                <li id="helpCenter">Help Center</li>
+                <li id="editLocation">Edit Location</li>
+                <li id="signOut">Sign Out</li>
+                <li id="delete">Delete Profile</li>
+              </ul>
+            </li>
+          </ul>
+      </div>
+    </header>
+    <!-- End Header -->
+    <div id="itemDetails">
+      <div class="container">
+        <div class="owner-container">
+          <div class="owner">
+            <div class="info">
+              <img src="assets/imgs//Person/Ahmed-Salem.jpg" alt="">
+              <div class="name-and-date">
+                <div class="name">Ahmed Salem</div>
+                <div class="date"><span class="num">2</span> <span>Days ago</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="owner-btn">
+            <button id="seeHisPage" type="button">See His Page</button>
+            <button onclick="ShowUserReviewPopUp()" id="LeaveYourReview" type="button">Leave Your Review</button>
+          </div>
+        </div>
+        <div id="itemTitle" class="container">
+          <div id="itemTitleDetails" class="main-title">
+            <div class="text-header">
+              <h2 class="title top">Enjoy big House in Grand Style</h2>
+              <div class="mid"><span class="category">Property</span>, <span class="subcategory">House</span>, <span class="location">New Cairo</span></div>
+              <div class="footer"><span class="star"><i class="fa-solid fa-star"></i></span> <span class="rate">4.0</span> (<span class="reviews">3</span> Reviews) <span class="available">Available</span></div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="container">
+      <div class="box-container">
+        <div class="box">
+          <div class="image">
+            <img src="assets/imgs/Card_Images/house.jpg" alt="">
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="assets/imgs/Card_Images/House/deborah-cortelazzi-gREquCUXQLI-unsplash.jpg" alt="">
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="assets/imgs/Card_Images/House/andrea-davis-IWfe63thJxk-unsplash.jpg" alt="">
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="assets/imgs/Card_Images/House/collov-home-design-KvGG0paOhOA-unsplash.jpg" alt="">
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="assets/imgs/Card_Images/House/francesca-tosolini-tHkJAMcO3QE-unsplash.jpg" alt="">
+          </div>
+        </div>
+        
+      </div>
+      <div id="loadMore">Show All</div>
+    </div>
+
+
+
+        <div id="discription" class="container">
+          <div id="descTitle" class="main-title">
+            <h1>Description</h1>
+          </div>
+          <p>Located in the heart of New Cairo, this beautiful house is the perfect place to call home. With ample living space, the house boasts a modern and spacious design, perfect for families or those who love to entertain. With comfortable bedrooms and luxurious bathrooms, this house provides a serene retreat from the hustle and bustle of everyday life. The house comes equipped with the latest appliances and technology, making it an effortless and pleasurable living experience. The outdoor living space is perfect for relaxing, featuring a stunning garden and grand swimming pool to enjoy year-round. The convenient location in New Cairo provides easy access to local amenities such as schools, malls, and restaurants, making it the perfect home for those who value location and convenience. Don't miss out on the opportunity to make this house your home!</p>
+        </div>
+        <div class="condition">
+          <input id="condition" type="checkbox">
+          <label for="condition">The client agrees to maintain the property in its original condition and to take reasonable care of it during the rental period. Any malicious or intentional damage to the property will result in additional charges. These charges include, but are not limited to, the cost of repairs or replacement of damaged items, legal fees, and insurance.</label>
+        </div>
+        <div id="location" class="container">
+          <div id="descTitle" class="main-title">
+            <h1>Location</h1>
+          </div>
+          <div class="location-field">
+            Cairo
+          </div>
+        </div>
+        <div id="descTitle" class="main-title">
+          <h1>Shipping</h1>
+        </div>
+        <div class="location-box">
+          <div class="loc-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div class="mid">
+            <div>
+              <h3>Home</h3>
+            </div>
+            <p>123 Main St, Apt 4B, Anytown, state 12345</p>
+          </div>
+        </div>
+        <div class="time-and-bell">
+          <div class="time">
+            <div id="StartTime">
+                <label for="start">Choose: Start Time</label>
+                <input id="start" class="start" type="date">
+            </div>
+            <div id="endTime">
+              <label for="end">Choose: End Time</label>
+              <input id="end" class="end" type="date">
+            </div>
+          </div>
+          <div class="bell">
+            <div class="amount">Amount <span class="amount-price"><span class="dollar-sign">$</span><span class="price">120</span></span></div>
+            <div class="commission">Commission <span class="commission-price"><span class="dollar-sign">$</span><span class="price">10</span></span></div>
+            <div class="insurance">Insurance <span class="insurance-price"><span class="dollar-sign">$</span><span class="price">65</span></span></div>
+            <div class="shipping">Shipping <span class="shipping-price"><span class="dollar-sign">$</span><span class="price">-</span></span></div>
+            <div class="total-container">
+              <div class="total">Total <span class="total-price"><span class="dollar-sign">$</span><span class="price">195</span></span></div>
+            </div>
+            <div class="purchase-btn"><div class="button purchase"><i class="fa-solid fa-fire"></i>Purchase<i class="fa-solid fa-fire"></i></div></div>
+          </div>
+        </div>
+        <div class="reviews-filter">
+          <div id="review-filter" class="container">
+            <div id="review-filter-Title" class="main-title">
+              <h1>Reviews</h1>
+              <button id="leaveItemReview">Leave Review</button>
+            </div>
+          </div>
+          <ul class="filter-review-bar">
+            <li data-star=".all" class="active">All</li>
+            <li data-star=".five"><i class="fa-solid fa-star"></i>5</li>
+            <li data-star=".four"><i class="fa-solid fa-star"></i>4</li>
+            <li data-star=".three"><i class="fa-solid fa-star"></i>3</li>
+            <li data-star=".two"><i class="fa-solid fa-star"></i>2</li>
+            <li data-star=".one"><i class="fa-solid fa-star"></i>1</li>
+            <li data-star=".zero"><i class="fa-solid fa-star"></i>0</li>
+          </ul>
+        </div>
+        <div class="review-comment">
+          
+        </div>
+      </div>
+    </div>
+    <!-- Start Footer Section -->
+    <footer id="footer" style="margin-top: 40;">
+      <div class="container">
+        <div class="box">
+          <div class="title"><img src="assets/imgs/logo.svg" alt="">LLEGAR</div>
+          <div class="icons">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+          </div>
+          <p>© 2023, LLEGAR, Inc. "All rights reserved to LLEGAR, Inc. and its affiliates. LLEGAR name and logo, and related names are trademarks of LLEGAR, Inc. All other trademarks are the respective owner's property."</p>
+        </div>
+        <div class="box">
+          <div class="link"> 
+            <div class="con about-us">
+              <div class="footer-links">
+                About Us
+              </div>
+            </div>
+          </div>
+          <div class="link"> 
+            <div class="con contact-Us">
+              <div class="footer-links">
+                Contact us
+              </div>
+            </div>
+          </div>
+          <div class="link"> 
+            <div class="con help-us">
+              <div class="footer-links">
+                Help Us
+              </div>
+            </div>
+          </div>
+          <div class="link"> 
+            <div id="privacyPolicy" class="con privacy-policy">
+              <div class="footer-links">
+                Privacy Policy
+              </div>
+            </div>
+          </div>
+          <div class="link"> 
+            <div class="con jobs-offer">
+              <div class="footer-links">
+                Jobs Offer
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="info">
+            <i class="fa-solid fa-earth-americas"></i>
+            Egypt, Ismalia, Suez Qanal University, faculty of computer science 
+          </div>
+          <div class="info">
+            <i class="fa-solid fa-clock"></i>
+            Technical support Hours: From 10:00 To 18:00
+          </div>
+          <div class="info">
+            <i class="fa-solid fa-square-phone"></i>
+            <div class="numbers">
+              +20123456789
+              +20198765432
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copy-right">Made by Team LLEGAR</div>
+    </footer>
+    <!-- End Footer Section -->
+    <!-- Scripts files -->
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/item_details.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
